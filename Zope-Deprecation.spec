@@ -1,19 +1,19 @@
-Summary:	zope.deprecation package used in Zope 3
+Summary:	Deprecation library for Python code
 Name:		Zope-Deprecation
 Version:	3.4.0
-Release:	0.1
-License:	ZPL 2.0
-Group:		Development/Tools
+Release:	1
+License:	ZPL 2.1
+Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.deprecation-%{version}.tar.gz
 # Source0-md5:	cc5814063505f217c6df3fc93ec8b2df
-URL:		http://pypi.python.org/pypi/zope.deprecation/3.5.1
+URL:		http://www.zope.org/
 BuildRequires:	python
 BuildRequires:	python-devel
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-zope.deprecation package used in Zope 3.
+Deprecation library for Python code.
 
 %prep
 %setup -q -n zope.deprecation-%{version}
