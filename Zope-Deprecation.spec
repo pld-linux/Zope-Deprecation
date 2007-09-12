@@ -10,6 +10,7 @@ URL:		http://www.zope.org/
 BuildRequires:	python
 BuildRequires:	python-devel
 %pyrequires_eq	python-modules
+Requires:	Zope-Testing
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
