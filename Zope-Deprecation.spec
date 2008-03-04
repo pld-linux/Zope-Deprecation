@@ -2,7 +2,7 @@ Summary:	Deprecation library for Python code
 Summary(pl.UTF-8):	Biblioteka odradzająca dla kodu w Pythonie
 Name:		Zope-Deprecation
 Version:	3.4.0
-Release:	1
+Release:	2
 License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://download.zope.org/distribution/zope.deprecation-%{version}.tar.gz
@@ -33,6 +33,7 @@ python ./setup.py build
 rm -rf $RPM_BUILD_ROOT
 
 python ./setup.py install \
+	--install-purelib=%{py_sitedir} \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 
@@ -43,6 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitescriptdir}/zope/deprecation
-%{py_sitescriptdir}/zope.deprecation-*.egg-info
-%{py_sitescriptdir}/zope.deprecation-*-nspkg.pth
+%{py_sitedir}/zope/deprecation
+%{py_sitedir}/zope.deprecation-*.egg-info
+%{py_sitedir}/zope.deprecation-*-nspkg.pth
