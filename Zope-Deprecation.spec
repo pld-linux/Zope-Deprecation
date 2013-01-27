@@ -1,5 +1,9 @@
 # TODO
 # - why it was needed to move code to py_sitedir in 99929afd5fede7d191f944c30d2cfa692454ba84 ?
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+
 Summary:	Deprecation library for Python code
 Summary(pl.UTF-8):	Biblioteka odradzająca dla kodu w Pythonie
 Name:		Zope-Deprecation
