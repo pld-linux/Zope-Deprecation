@@ -7,14 +7,14 @@
 Summary:	Deprecation library for Python code
 Summary(pl.UTF-8):	Biblioteka odradzająca dla kodu w Pythonie
 Name:		Zope-Deprecation
-Version:	3.4.0
-Release:	5
+Version:	4.0.2
+Release:	1
 License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/z/zope.deprecation/zope.deprecation-%{version}.tar.gz
-# Source0-md5:	cc5814063505f217c6df3fc93ec8b2df
-URL:		http://www.zope.org/
-BuildRequires:	python >= 1:2.5
+# Source0-md5:	5f8cecce85f2783f9e020f1288e908fd
+URL:		http://docs.zope.org/zope.deprecation/
+BuildRequires:	python >= 1:2.6
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
@@ -26,7 +26,8 @@ Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Deprecation library for Python code.
+This package provides a simple function called deprecated(names, reason) to
+mark deprecated modules, classes, functions, methods and properties.
 
 %description -l pl.UTF-8
 Biblioteka odradzająca dla kodu w Pythonie.
@@ -56,10 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc CHANGES.txt
 %dir %{py_sitedir}/zope/deprecation
 %{py_sitedir}/zope/deprecation/*.py[co]
-%{py_sitedir}/zope/deprecation/DEPENDENCIES.cfg
-# mv to %doc ?
-%{py_sitedir}/zope/deprecation/README.txt
 %{py_sitedir}/zope.deprecation-*.egg-info
 %{py_sitedir}/zope.deprecation-*-nspkg.pth
