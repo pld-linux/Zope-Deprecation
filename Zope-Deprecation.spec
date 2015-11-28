@@ -36,13 +36,13 @@ Biblioteka odradzająca dla kodu w Pythonie.
 %setup -q -n zope.deprecation-%{version}
 
 %build
-%{__python} setup.py build
+%py_build
 
 %{?with_tests:%{__python} setup.py test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
+%py_install \
 	--install-purelib=%{py_sitedir} \
 	--skip-build \
 	--optimize 2 \
