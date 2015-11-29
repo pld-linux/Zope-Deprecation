@@ -18,7 +18,7 @@ BuildRequires:	python >= 1:2.6
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	Zope-Testing
 Requires:	python-modules
 # not noarch because of py_sitedir in 99929afd5fede7d191f944c30d2cfa692454ba84
